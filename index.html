@@ -90,6 +90,31 @@
     .link-list a:hover {
       background-color: #005a9e;
     }
+
+    /* QR Code 樣式 */
+    .qrcode-container {
+      display: flex;
+      gap: 100px; /* 調整 QR Code 間距 */
+      align-items: center; /* 垂直置中 */
+      margin-top: 10px; /* 調整與上方連結的間距 */
+    }
+    .qrcode-container img {
+      width: 200px; /* 調整 QR Code 圖片大小 */
+      height: 200px;
+      border: 1px solid #ccc; /* 可選：加上邊框 */
+      border-radius: 5px; /* 可選：加上圓角 */
+    }
+    .qrcode-container span {
+      font-size: 0.9em;
+      color: #555;
+      display: block; /* 讓文字佔據一行 */
+      text-align: center; /* 文字置中 */
+      margin-bottom: 5px; /* 調整文字與圖片的間距 */
+    }
+    .app-title {
+      font-size: 1.2em; /* 調整文字大小 */
+      font-weight: bold; /* 設定為粗體 */
+    }
   </style>
 </head>
 <body>
@@ -98,7 +123,8 @@
     <h2>導覽</h2>
     <ul>
       <li><a href="#search">聖經與啟應文</a></li>
-      <li><a href="#hymns">聖詩</a></li> </ul>
+      <li><a href="#hymns">聖詩</a></li>
+    </ul>
   </nav>
 
   <div class="content">
@@ -107,7 +133,18 @@
     <div id="search" class="category">
       <h2>聖經與啟應文</h2>
       <ul class="link-list">
-        <li><a href="https://bible.fhl.net/new/audio_hb.php?version=1" target="_blank">台語有聲聖經</a></li>
+        <li><a href="https://bible.fhl.net/new/audio_hb.php?version=1" target="_blank">台語有聲聖經網站</a>
+          <div class="qrcode-container">
+            <div>
+              <span class="app-title">IOS 台語有聲聖經APP</span><br>
+              <img src="IMAGES/qrcode_apps.apple.com.png" alt="IOS QR Code">
+            </div>
+            <div>
+              <span class="app-title">Android 台語有聲聖經APP</span><br>
+              <img src="IMAGES/qrcode_play.google.com.png" alt="Android QR Code">
+            </div>
+          </div>
+        </li>
         <li><a href="https://www.youtube.com/watch?v=3BM6C3Npb_8&list=PLa5Ky5ANCrzzet0bHbwnjyyLswor_V0Wa"  target="_blank">啟應文(點進去後右邊有播放清單可選)</a></li>
       </ul>
     </div>
